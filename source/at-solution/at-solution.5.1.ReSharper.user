@@ -1,0 +1,148 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Shared/f:_LoginPartial.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:AccountController.cs" caret="6024" fromTop="49" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Shared/f:Error.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Shared/f:_Layout.cshtml" caret="794" fromTop="18" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:SectionsPartial.cshtml" caret="0" fromTop="0" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:IServicesFactory.cs" caret="309" fromTop="11" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:ServicesFactory.cs" caret="535" fromTop="20" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:IArticlesService.cs" caret="222" fromTop="9" />
+      <File id="C43A64CB-2190-422F-8C7D-4C701E25DD0D/f:SectionPrimitive.cs/l:..?at-solution.portal.model?SectionPrimitive.cs" caret="693" fromTop="20" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Home/f:Index.cshtml" caret="2003" fromTop="15" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:ArticlesService.cs" caret="666" fromTop="11" />
+      <File id="FA09CDF1-3755-4549-9320-7C95B9CA0955/f:App.Config" caret="456" fromTop="3" />
+      <File id="FA09CDF1-3755-4549-9320-7C95B9CA0955/f:Model.Designer.cs" caret="0" fromTop="0" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1173" fromTop="37" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:Edit.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:Create.cshtml" caret="240" fromTop="13" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/f:Web.config" caret="878" fromTop="12" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:ArticlesPartial.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:IndexInSection.cshtml" caret="7" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:Create.cshtml" caret="0" fromTop="0" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:Delete.cshtml" caret="637" fromTop="26" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:Index.cshtml" caret="122" fromTop="6" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="937" fromTop="13" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1297" fromTop="14" />
+      <File id="33522332-3B4B-47FD-8B7C-E2FE743EC3CA/f:PrimitiveHelper.cs/l:..?at-solution.portal.model?PrimitiveHelper.cs" caret="606" fromTop="17" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:Edit.cshtml" caret="1258" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/f:Web.config" caret="997" fromTop="12" />
+      <File id="FA09CDF1-3755-4549-9320-7C95B9CA0955/f:Model.Designer.cs" caret="0" fromTop="0" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="582" fromTop="19" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Section/f:Index.cshtml" caret="160" fromTop="6" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1922" fromTop="33" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1912" fromTop="38" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1912" fromTop="22" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1912" fromTop="25" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1912" fromTop="33" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1833" fromTop="44" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1624" fromTop="39" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1207" fromTop="30" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1207" fromTop="30" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1207" fromTop="30" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1207" fromTop="30" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1173" fromTop="35" />
+      <File id="CDAAA78F-4D5C-4BFE-BD1F-371A42DCC910/f:ISectionsService.cs" caret="1187" fromTop="37" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="331" fromTop="11" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="2698" fromTop="49" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="2546" fromTop="46" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1096" fromTop="15" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="422" fromTop="14" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="917" fromTop="22" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="863" fromTop="27" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1472" fromTop="29" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:Index.cshtml" caret="157" fromTop="8" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:IndexInSection.cshtml" caret="7" fromTop="0" />
+      <File id="CD96DF4E-F694-47DA-9A59-D098AFEF86F8/f:SectionsService.cs" caret="2715" fromTop="11" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Controllers/f:SectionController.cs" caret="1321" fromTop="15" />
+      <File id="8AB49338-B94C-46FC-B33C-47D5F2A9136D/d:Views/d:Article/f:Edit.cshtml" caret="1258" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="void" priority="3" />
+      <Item value="articlePrimitive" priority="4" />
+      <Item value="SectionPrimitive`0" priority="5" />
+      <Item value="sectionPrimitive" priority="3" />
+      <Item value="ForumItemPrimitive`0" priority="1" />
+      <Item value="forumItemPrimitive" priority="1" />
+      <Item value="ArticlePrimitive`0" priority="0" />
+      <Item value="UserPrimitive`0" priority="0" />
+      <Item value="userPrimitive" priority="0" />
+      <Item value="at_solution" priority="0" />
+      <Item value="Article`0" priority="0" />
+      <Item value="article" priority="2" />
+      <Item value="var" priority="1" />
+      <Item value="IArticlesService`0" priority="0" />
+      <Item value="ISectionsService`0" priority="0" />
+      <Item value="new" priority="2" />
+      <Item value="return" priority="4" />
+      <Item value="NullReferenceException`0" priority="0" />
+      <Item value="ArticlesService`0" priority="0" />
+      <Item value="IServicesFactory" priority="0" />
+      <Item value="_servicesFacotry" priority="0" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="context" priority="0" />
+      <Item value="x" priority="1" />
+      <Item value="Section`0" priority="1" />
+      <Item value="ActionResult`0" priority="0" />
+      <Item value="IFormatProvider`0" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="result" priority="1" />
+      <Item value="null" priority="1" />
+      <Item value="else" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:at_solution.portal.services.local.AtSolutionEntities">
+      <Item value="Articles" priority="2" />
+      <Item value="Sections" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:at_solution.portal.services.interfaces.IServicesFactory">
+      <Item value="GetSectionService`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="Select`0" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Where`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:at_solution.portal.entities.Section">
+      <Item value="GetPrimitive`0" priority="1" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList`1" priority="0" />
+      <Item value="FirstOrDefault`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:at_solution.portal.primitive.SectionPrimitive">
+      <Item value="Parent_Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:at_solution.portal.services.interfaces.ISectionsService">
+      <Item value="CreateOrUpdateSection`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

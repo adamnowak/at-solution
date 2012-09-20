@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="model.portal.at_solution.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="modelportalat_solutionStoreContainer">
+          <EntitySet Name="ArticleInSections" EntityType="model.portal.at_solution.Store.ArticleInSections" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Articles" EntityType="model.portal.at_solution.Store.Articles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ForumItems" EntityType="model.portal.at_solution.Store.ForumItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="model.portal.at_solution.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sections" EntityType="model.portal.at_solution.Store.Sections" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserInRoles" EntityType="model.portal.at_solution.Store.UserInRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="model.portal.at_solution.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ArticleInSections_Articles" Association="model.portal.at_solution.Store.FK_ArticleInSections_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticleInSections" EntitySet="ArticleInSections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleInSections_Sections" Association="model.portal.at_solution.Store.FK_ArticleInSections_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="ArticleInSections" EntitySet="ArticleInSections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Articles_Users" Association="model.portal.at_solution.Store.FK_Articles_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ForumItems_Articles" Association="model.portal.at_solution.Store.FK_ForumItems_Articles">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ForumItems" EntitySet="ForumItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ForumItems_Users" Association="model.portal.at_solution.Store.FK_ForumItems_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ForumItems" EntitySet="ForumItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sections_Sections" Association="model.portal.at_solution.Store.FK_Sections_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Sections1" EntitySet="Sections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInRoles_Roles" Association="model.portal.at_solution.Store.FK_UserInRoles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UserInRoles" EntitySet="UserInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInRoles_Users" Association="model.portal.at_solution.Store.FK_UserInRoles_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserInRoles" EntitySet="UserInRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ArticleInSections">
+          <Key>
+            <PropertyRef Name="Article_Id" />
+            <PropertyRef Name="Section_Id" />
+          </Key>
+          <Property Name="Article_Id" Type="int" Nullable="false" />
+          <Property Name="Section_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Id" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Info" Type="nvarchar" MaxLength="250" />
+          <Property Name="FullText" Type="nvarchar(max)" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+          <Property Name="Position" Type="int" />
+        </EntityType>
+        <EntityType Name="ForumItems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Article_Id" Type="int" />
+          <Property Name="Text" Type="nvarchar" MaxLength="1000" />
+          <Property Name="User_Id" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_Id" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Position" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserInRoles">
+          <Key>
+            <PropertyRef Name="User_Id" />
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="User_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nick" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="120" />
+          <Property Name="PasswordSalz" Type="nvarchar" MaxLength="120" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="DeleteTime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_ArticleInSections_Articles">
+          <End Role="Articles" Type="model.portal.at_solution.Store.Articles" Multiplicity="1" />
+          <End Role="ArticleInSections" Type="model.portal.at_solution.Store.ArticleInSections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleInSections">
+              <PropertyRef Name="Article_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleInSections_Sections">
+          <End Role="Sections" Type="model.portal.at_solution.Store.Sections" Multiplicity="1" />
+          <End Role="ArticleInSections" Type="model.portal.at_solution.Store.ArticleInSections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleInSections">
+              <PropertyRef Name="Section_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Articles_Users">
+          <End Role="Users" Type="model.portal.at_solution.Store.Users" Multiplicity="0..1" />
+          <End Role="Articles" Type="model.portal.at_solution.Store.Articles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Articles">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ForumItems_Articles">
+          <End Role="Articles" Type="model.portal.at_solution.Store.Articles" Multiplicity="0..1" />
+          <End Role="ForumItems" Type="model.portal.at_solution.Store.ForumItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ForumItems">
+              <PropertyRef Name="Article_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ForumItems_Users">
+          <End Role="Users" Type="model.portal.at_solution.Store.Users" Multiplicity="0..1" />
+          <End Role="ForumItems" Type="model.portal.at_solution.Store.ForumItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ForumItems">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sections_Sections">
+          <End Role="Sections" Type="model.portal.at_solution.Store.Sections" Multiplicity="0..1" />
+          <End Role="Sections1" Type="model.portal.at_solution.Store.Sections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sections1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInRoles_Roles">
+          <End Role="Roles" Type="model.portal.at_solution.Store.Roles" Multiplicity="1" />
+          <End Role="UserInRoles" Type="model.portal.at_solution.Store.UserInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserInRoles">
+              <PropertyRef Name="Role_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserInRoles_Users">
+          <End Role="Users" Type="model.portal.at_solution.Store.Users" Multiplicity="1" />
+          <End Role="UserInRoles" Type="model.portal.at_solution.Store.UserInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserInRoles">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="model.portal.at_solution" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AtSolutionEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ForumItems" EntityType="model.portal.at_solution.ForumItem" />
+          <EntitySet Name="Roles" EntityType="model.portal.at_solution.Role" />
+          <EntitySet Name="Users" EntityType="model.portal.at_solution.User" />
+          <AssociationSet Name="FK_ForumItems_Users" Association="model.portal.at_solution.FK_ForumItems_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ForumItems" EntitySet="ForumItems" />
+          </AssociationSet>
+          <AssociationSet Name="UserInRoles" Association="model.portal.at_solution.UserInRoles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Articles" EntityType="model.portal.at_solution.Article" />
+          <EntitySet Name="Sections" EntityType="model.portal.at_solution.Section" />
+          <AssociationSet Name="FK_Articles_Users" Association="model.portal.at_solution.FK_Articles_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Article" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ForumItems_Articles" Association="model.portal.at_solution.FK_ForumItems_Articles">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="ForumItem" EntitySet="ForumItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sections_Sections" Association="model.portal.at_solution.FK_Sections_Sections">
+            <End Role="Section" EntitySet="Sections" />
+            <End Role="Section1" EntitySet="Sections" />
+          </AssociationSet>
+          <AssociationSet Name="ArticleInSections" Association="model.portal.at_solution.ArticleInSections">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="Section" EntitySet="Sections" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ForumItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Article_Id" Type="Int32" />
+          <Property Name="Text" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="User_Id" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="User" Relationship="model.portal.at_solution.FK_ForumItems_Users" FromRole="ForumItems" ToRole="Users" />
+          <NavigationProperty Name="Article" Relationship="model.portal.at_solution.FK_ForumItems_Articles" FromRole="ForumItem" ToRole="Article" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="Users" Relationship="model.portal.at_solution.UserInRoles" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nick" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Surname" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordSalz" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" />
+          <Property Name="DeleteTime" Type="DateTime" />
+          <NavigationProperty Name="ForumItems" Relationship="model.portal.at_solution.FK_ForumItems_Users" FromRole="Users" ToRole="ForumItems" />
+          <NavigationProperty Name="Roles" Relationship="model.portal.at_solution.UserInRoles" FromRole="Users" ToRole="Roles" />
+          <NavigationProperty Name="Articles" Relationship="model.portal.at_solution.FK_Articles_Users" FromRole="User" ToRole="Article" />
+        </EntityType>
+        <Association Name="FK_ForumItems_Users">
+          <End Role="Users" Type="model.portal.at_solution.User" Multiplicity="0..1" />
+          <End Role="ForumItems" Type="model.portal.at_solution.ForumItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ForumItems">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserInRoles">
+          <End Role="Roles" Type="model.portal.at_solution.Role" Multiplicity="*" />
+          <End Role="Users" Type="model.portal.at_solution.User" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Id" />
+          <Property Type="String" Name="Title" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Info" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FullText" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="DateTime" Name="DeleteTime" />
+          <Property Type="Int32" Name="Position" />
+          <NavigationProperty Name="User" Relationship="model.portal.at_solution.FK_Articles_Users" FromRole="Article" ToRole="User" />
+          <NavigationProperty Name="ForumItems" Relationship="model.portal.at_solution.FK_ForumItems_Articles" FromRole="Article" ToRole="ForumItem" />
+          <NavigationProperty Name="Sections" Relationship="model.portal.at_solution.ArticleInSections" FromRole="Article" ToRole="Section" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Parent_Id" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Position" />
+          <Property Type="DateTime" Name="CreateTime" />
+          <Property Type="DateTime" Name="DeleteTime" />
+          <NavigationProperty Name="Sections_Children" Relationship="model.portal.at_solution.FK_Sections_Sections" FromRole="Section" ToRole="Section1" />
+          <NavigationProperty Name="Section_Parent" Relationship="model.portal.at_solution.FK_Sections_Sections" FromRole="Section1" ToRole="Section" />
+          <NavigationProperty Name="Articles" Relationship="model.portal.at_solution.ArticleInSections" FromRole="Section" ToRole="Article" />
+        </EntityType>
+        <Association Name="FK_Articles_Users">
+          <End Type="model.portal.at_solution.User" Role="User" Multiplicity="0..1" />
+          <End Type="model.portal.at_solution.Article" Role="Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ForumItems_Articles">
+          <End Type="model.portal.at_solution.Article" Role="Article" Multiplicity="0..1" />
+          <End Type="model.portal.at_solution.ForumItem" Role="ForumItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ForumItem">
+              <PropertyRef Name="Article_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sections_Sections">
+          <End Type="model.portal.at_solution.Section" Role="Section" Multiplicity="0..1" />
+          <End Type="model.portal.at_solution.Section" Role="Section1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Section">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Section1">
+              <PropertyRef Name="Parent_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ArticleInSections">
+          <End Type="model.portal.at_solution.Article" Role="Article" Multiplicity="*" />
+          <End Type="model.portal.at_solution.Section" Role="Section" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="modelportalat_solutionStoreContainer" CdmEntityContainer="AtSolutionEntities">
+          <EntitySetMapping Name="ForumItems"><EntityTypeMapping TypeName="model.portal.at_solution.ForumItem"><MappingFragment StoreEntitySet="ForumItems">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Article_Id" ColumnName="Article_Id" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Roles"><EntityTypeMapping TypeName="model.portal.at_solution.Role"><MappingFragment StoreEntitySet="Roles">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="model.portal.at_solution.User"><MappingFragment StoreEntitySet="Users">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Nick" ColumnName="Nick" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Surname" ColumnName="Surname" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="PasswordSalz" ColumnName="PasswordSalz" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="UserInRoles" TypeName="model.portal.at_solution.UserInRoles" StoreEntitySet="UserInRoles">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="Id" ColumnName="Role_Id" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="Id" ColumnName="User_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="model.portal.at_solution.Article">
+              <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="FullText" ColumnName="FullText" />
+                <ScalarProperty Name="Info" ColumnName="Info" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sections">
+            <EntityTypeMapping TypeName="model.portal.at_solution.Section">
+              <MappingFragment StoreEntitySet="Sections">
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Parent_Id" ColumnName="Parent_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ArticleInSections" TypeName="model.portal.at_solution.ArticleInSections" StoreEntitySet="ArticleInSections">
+            <EndProperty Name="Section">
+              <ScalarProperty Name="Id" ColumnName="Section_Id" />
+            </EndProperty>
+            <EndProperty Name="Article">
+              <ScalarProperty Name="Id" ColumnName="Article_Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="model.portal.at_solution.ForumItem" Width="1.5" PointX="5.625" PointY="2" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="model.portal.at_solution.Role" Width="1.5" PointX="0.75" PointY="1.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="model.portal.at_solution.User" Width="1.5" PointX="3" PointY="1" Height="3.5186979166666665" IsExpanded="true" />
+        <AssociationConnector Association="model.portal.at_solution.FK_ForumItems_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.2593489583333328" />
+          <ConnectorPoint PointX="5.625" PointY="3.2593489583333328" />
+        </AssociationConnector>
+        <AssociationConnector Association="model.portal.at_solution.UserInRoles" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.7401432291666667" />
+          <ConnectorPoint PointX="3" PointY="2.7401432291666667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="model.portal.at_solution.Article" Width="1.5" PointX="5.25" PointY="6.25" Height="3.1340950520833335" />
+        <EntityTypeShape EntityType="model.portal.at_solution.Section" Width="1.5" PointX="7.5" PointY="6.375" Height="2.7494921874999987" />
+        <AssociationConnector Association="model.portal.at_solution.FK_Articles_Users" >
+          <ConnectorPoint PointX="3.75" PointY="4.5186979166666656" />
+          <ConnectorPoint PointX="3.75" PointY="7.8170475260416667" />
+          <ConnectorPoint PointX="5.25" PointY="7.8170475260416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="model.portal.at_solution.FK_ForumItems_Articles" >
+          <ConnectorPoint PointX="6.1875" PointY="6.25" />
+          <ConnectorPoint PointX="6.1875" PointY="4.5571907552083326" />
+        </AssociationConnector>
+        <AssociationConnector Association="model.portal.at_solution.FK_Sections_Sections" >
+          <ConnectorPoint PointX="8.0319230769230767" PointY="9.1244921875" />
+          <ConnectorPoint PointX="8.0319230769230767" PointY="9.3744921875" />
+          <ConnectorPoint PointX="8.47846153846154" PointY="9.3744921875" />
+          <ConnectorPoint PointX="8.47846153846154" PointY="9.1244921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="model.portal.at_solution.ArticleInSections" >
+          <ConnectorPoint PointX="6.75" PointY="7.74974609375" />
+          <ConnectorPoint PointX="7.5" PointY="7.74974609375" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

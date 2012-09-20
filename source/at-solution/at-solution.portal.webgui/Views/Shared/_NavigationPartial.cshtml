@@ -1,0 +1,17 @@
+﻿
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+            <ul>
+                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
+        </li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+@*@if (Request.IsAuthenticated) {*@
+
+    <ul>
+        <li>@Html.ActionLink("Edytuj Sekcje", "Index", "Section")</li>
+        <li>@Html.ActionLink("Edytuj Sekcje", "Index", "Section")</li>
+    </ul>
+@*}*@
